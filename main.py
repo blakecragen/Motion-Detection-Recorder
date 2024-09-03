@@ -43,7 +43,7 @@ while True:
         last_motion_time = time.time()
         if not recording:
             # Start recording with a formatted timestamp
-            timestamp = datetime.now().strftime("%m_%d_%H-%M")
+            timestamp = datetime.now().strftime("%m_%d_%H-%M-%S")
             output_filename = f'recording_{timestamp}.avi'
             out = cv2.VideoWriter(output_filename, fourcc, 20.0, (frame.shape[1], frame.shape[0]))
             recording = True
